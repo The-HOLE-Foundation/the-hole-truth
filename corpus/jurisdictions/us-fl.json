@@ -1,0 +1,194 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-FL",
+  "name": "Florida",
+  "level": "state",
+  "law": {
+    "short_name": "FL Public Records Act",
+    "long_name": "Florida Public Records Act (commonly grouped with the Sunshine Law as 'Florida Sunshine')",
+    "primary_citation": {
+      "value": "Fla. Stat. Ch. 119",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. Ch. 119 (Public Records)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/0119.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Issue title says 'FL Sunshine.' In common usage that label conflates two distinct laws: (1) Ch. 119 Public Records Act, which governs records requests; and (2) § 286.011 Sunshine Law, which governs open meetings. For a public-records assistant we treat 'FL Sunshine' as Ch. 119 plus the constitutional records provision in Art. I § 24(a). Flagged for CEO confirmation in open_questions."
+    },
+    "constitutional_basis": {
+      "value": "Fla. Const. Art. I, § 24(a) — guarantees the right of access to government records.",
+      "certainty": "confirmed",
+      "citation": "Fla. Const. Art. I, § 24(a)",
+      "source_url": "https://www.flsenate.gov/Laws/Constitution#A1S24",
+      "retrieved_on": "2026-06-01",
+      "notes": "Art. I § 24(b) covers open meetings (the actual 'Sunshine Law'). § 24(a) covers records and is the constitutional anchor for Ch. 119."
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": "No fixed numeric deadline; statute requires response in a 'reasonable time' to 'acknowledge' and produce.",
+      "certainty": "needs_escalation",
+      "citation": "Fla. Stat. § 119.07(1)(c)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Florida's records law uniquely does NOT impose a fixed deadline. Case law (Tribune Co. v. Cannella, 458 So. 2d 1075 (Fla. 1984)) construes 'reasonable time' narrowly — limited to time needed to retrieve and examine the record. Surfacing a number to users requires legal review."
+    },
+    "substantive_deadline": {
+      "value": "No fixed numeric deadline; 'reasonable time' standard.",
+      "certainty": "needs_escalation",
+      "citation": "Fla. Stat. § 119.07(1)(c); Tribune Co. v. Cannella, 458 So. 2d 1075 (Fla. 1984)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "extension_rules": {
+      "value": "No statutory extension mechanism; agencies must produce within a reasonable time absent legitimate retrieval/review delay.",
+      "certainty": "uncertain",
+      "citation": "Fla. Stat. § 119.07(1)(c)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "constructive_denial": {
+      "value": "Failure to acknowledge or respond within a reasonable time may give rise to a cause of action; constructive denial is largely judicially constructed.",
+      "certainty": "uncertain",
+      "citation": "Tribune Co. v. Cannella, 458 So. 2d 1075 (Fla. 1984)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "Agency may charge a 'special service charge' for the labor cost of personnel required to extensively use information technology resources or extensive clerical or supervisory assistance. Routine retrieval is not chargeable.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(4)(d)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "copy_fees": {
+      "value": "$0.15 per one-sided copy up to 8.5\" x 14\"; $0.20 for two-sided. Certified copies: $1.00 each. Other media at actual cost.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(4)(a)(1)-(2)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "Statute does not require fee waiver. Agencies may waive at discretion.",
+      "certainty": "uncertain",
+      "citation": "Fla. Stat. Ch. 119 (absence of mandatory waiver provision)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "in_person", "phone"],
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(1)(a)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Florida is unusual in not requiring a written request; oral requests are permitted. In practice writing is recommended for record-keeping and appeal preservation."
+    },
+    "required_identification": {
+      "value": "No identification required. Agency may not require the requester to disclose identity or purpose.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(1)(a)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(1)(a)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "agency_designation": {
+      "value": "Each agency's custodian of public records. AG's office publishes a Government-in-the-Sunshine Manual that aids identification.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.011(5)",
+      "source_url": "http://myfloridalegal.com/pages.nsf/Main/DC0B20B7DC22B7418525791B006A54E4",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Active criminal investigative information", "citation": "Fla. Stat. § 119.071(2)(c)", "summary": "Information compiled in the course of active criminal investigation or intelligence." },
+        { "name": "Agency personnel records — partial", "citation": "Fla. Stat. § 119.071(4)", "summary": "Home addresses, phone numbers, photos, etc. of specified categories of public employees." },
+        { "name": "Security/system plans", "citation": "Fla. Stat. § 119.071(3)", "summary": "Building plans, security plans, IT security records." },
+        { "name": "Sealed/confidential by other statute", "citation": "Fla. Stat. § 119.071(1)", "summary": "Records made confidential or exempt by other statutes." },
+        { "name": "Trade secrets / commercial confidential", "citation": "Fla. Stat. § 815.045; § 119.0715", "summary": "Trade secrets and proprietary business information." }
+      ],
+      "certainty": "uncertain",
+      "citation": "Fla. Stat. § 119.071 (and numerous statute-specific exemptions scattered across the Florida Statutes)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.071.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Florida has hundreds of statute-specific public-records exemptions outside Ch. 119. § 119.071 contains the general categorical exemptions. Full enumeration requires assembling exemptions across the entire Florida Statutes."
+    },
+    "burden_of_proof": {
+      "value": "Constitutional and statutory presumption of openness; agency must specifically state the statutory basis for any withholding.",
+      "certainty": "confirmed",
+      "citation": "Fla. Const. Art. I, § 24(a); Fla. Stat. § 119.07(1)(f)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "segregability_rule": {
+      "value": "If a portion of a record is exempt, the agency must redact only the exempt portion and produce the remainder.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.07(1)(d)",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.07.html",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "No formal administrative appeal mechanism. Requester may contact the agency head, the Florida AG's Open Government Mediation Program, or pursue judicial relief directly.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. Ch. 119 (absence of administrative appeal); AG mediation is voluntary.",
+      "source_url": "http://myfloridalegal.com/pages.nsf/Main/DC0B20B7DC22B7418525791B006A54E4",
+      "retrieved_on": "2026-06-01"
+    },
+    "judicial_path": {
+      "value": "Civil action in circuit court to compel production. Court must set an immediate hearing and give the case priority.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.11",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.11.html",
+      "retrieved_on": "2026-06-01"
+    },
+    "attorneys_fees": {
+      "value": "Court SHALL award reasonable costs and attorney's fees to a substantially prevailing requester if the agency unlawfully refused access. Civil penalties of up to $500 against knowing-violator officials may also be imposed.",
+      "certainty": "confirmed",
+      "citation": "Fla. Stat. § 119.12; § 119.10",
+      "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.12.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Pre-suit notice requirement under § 119.12(2) since 2017 amendments — requester must give the agency 5 business days' notice before filing suit, unless the agency has a documented policy to not produce."
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. Florida public-records access is constitutionally guaranteed and not limited by residency or citizenship.",
+    "certainty": "confirmed",
+    "citation": "Fla. Const. Art. I, § 24(a); Fla. Stat. § 119.01(1)",
+    "source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.01.html",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/0119.html",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": [
+      {
+        "question": "Confirm scope: 'FL Sunshine' in the original ticket — should this v0 entry cover only public records (Ch. 119 + Art. I § 24(a)) or also open meetings (§ 286.011 + Art. I § 24(b))? Public-records assistant scope argues for records only; flagging for confirmation.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/law/primary_citation"
+      },
+      {
+        "question": "Florida has no fixed numeric response deadline. What number, if any, should the product surface to users for the 'response deadline' field? Options: (a) state the 'reasonable time' standard with case-law context, (b) adopt a conservative estimate (e.g., '30 days' as commonly cited in advocacy literature) with disclaimer, (c) decline to display a number.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/response/substantive_deadline"
+      },
+      {
+        "question": "Enumerate all statute-specific public-records exemptions outside Ch. 119. This is a Florida-specific maintenance burden because exemptions are scattered across the Florida Statutes; v0 lists representative § 119.071 categories only.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/exemptions/categories"
+      }
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-IL",
+  "name": "Illinois",
+  "level": "state",
+  "law": {
+    "short_name": "IL FOIA",
+    "long_name": "Illinois Freedom of Information Act",
+    "primary_citation": {
+      "value": "5 ILCS 140",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/1 et seq.",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=85&ChapterID=2",
+      "retrieved_on": "2026-06-01"
+    },
+    "last_amended": {
+      "value": "Frequently amended; verify current text. Notable amendments include PA 96-542 (2010 overhaul) creating the Public Access Counselor.",
+      "certainty": "uncertain",
+      "citation": "5 ILCS 140 (current)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=85&ChapterID=2",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": { "amount": 5, "unit": "days", "day_type": "business" },
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(d)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Public body must respond within 5 business days after receipt of a request — either comply, deny in writing, or invoke a 5-business-day extension."
+    },
+    "substantive_deadline": {
+      "value": { "amount": 5, "unit": "days", "day_type": "business" },
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(d)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "extension_rules": {
+      "value": "Public body may extend response by 5 additional business days for enumerated reasons (records stored off-site, voluminous, need to consult with another body, etc.). Must give written notice citing the specific reason.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(e)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "expedited_processing": {
+      "value": "Commercial-use requests have a separate 21-business-day track. Non-commercial requests follow the standard 5-day rule.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3.1",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.1.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Illinois treats commercial requests differently — they get longer timelines, not shorter. The statute does not provide expedited processing parallel to federal FOIA."
+    },
+    "constructive_denial": {
+      "value": "Failure to respond within statutory time constitutes denial. Requester may file a Request for Review with the Public Access Counselor or sue.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(d); 5 ILCS 140/9.5",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "First 50 pages of black-and-white letter or legal-size copies are free. No fee for the first hour of search/review for commercial requests; statute treats search differently for commercial vs non-commercial.",
+      "certainty": "uncertain",
+      "citation": "5 ILCS 140/6",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K6.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "copy_fees": {
+      "value": "After first 50 pages, no more than $0.15 per page for black-and-white letter or legal-size copies. Color or non-standard copies at actual cost.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/6(b)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K6.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "Public body must furnish records without charge or at a reduced charge if the requester states the specific purpose for the request and indicates that a waiver is in the public interest.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/6(c)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K6.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "in_person", "fax"],
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(c)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Request must be in writing. Each public body must accept requests submitted by personal delivery, mail, telefax, email if available, or other means available."
+    },
+    "required_identification": {
+      "value": "No identification required for non-commercial requests. Commercial-use requests require the requester to state that the records are intended for commercial use.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3.1",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.1.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3(c)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Purpose only required (a) for commercial categorization and (b) when seeking a fee waiver."
+    },
+    "agency_designation": {
+      "value": "Each public body must designate one or more FOIA Officers. Request should be addressed to the FOIA Officer of the body holding the records.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/3.5",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.5.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Private information (PII)", "citation": "5 ILCS 140/7(1)(b)", "summary": "SSNs, drivers license numbers, employee evaluations, etc. — defined PII categories." },
+        { "name": "Personal information (privacy)", "citation": "5 ILCS 140/7(1)(c)", "summary": "Personal information that would be a clearly unwarranted invasion of personal privacy." },
+        { "name": "Law enforcement records", "citation": "5 ILCS 140/7(1)(d)", "summary": "Records of pending law enforcement proceedings, with enumerated sub-grounds." },
+        { "name": "Preliminary drafts / deliberative", "citation": "5 ILCS 140/7(1)(f)", "summary": "Preliminary drafts, notes, recommendations, memoranda in which opinions are expressed or policies are formulated." },
+        { "name": "Trade secrets / commercial", "citation": "5 ILCS 140/7(1)(g)", "summary": "Trade secrets and commercial or financial information obtained from a person or business." },
+        { "name": "Specifically exempted by statute", "citation": "5 ILCS 140/7(1)(a)", "summary": "Information specifically prohibited from disclosure by federal or state law or rules and regulations." },
+        { "name": "Test materials", "citation": "5 ILCS 140/7(1)(j)", "summary": "Administrative or technical information used in licensing or certification examinations." }
+      ],
+      "certainty": "uncertain",
+      "citation": "5 ILCS 140/7; 5 ILCS 140/7.5",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K7.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "5 ILCS 140/7.5 lists statute-specific exemptions referenced from /7. v0 lists representative categories only; full enumeration required for production."
+    },
+    "burden_of_proof": {
+      "value": "Public body has the burden of proving by clear and convincing evidence that records are exempt.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/1.2",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K1.2.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Illinois sets one of the highest burdens of proof for withholding in the country — 'clear and convincing.'"
+    },
+    "segregability_rule": {
+      "value": "If a record contains both exempt and non-exempt material, the public body must redact and disclose the non-exempt portions.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/7(1)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K7.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "Requester may file a Request for Review with the Public Access Counselor (PAC) in the Office of the Attorney General within 60 calendar days of a denial. PAC may issue a binding opinion or a non-binding letter.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/9.5",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K9.5.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "judicial_path": {
+      "value": "Requester may file an action for injunctive or declaratory relief in the circuit court for the county where the public body's principal office is located. No requirement to exhaust the PAC process first.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/11",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K11.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "appeal_deadline": {
+      "value": { "amount": 60, "unit": "days", "day_type": "calendar" },
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/9.5(a)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K9.5.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "PAC Request for Review deadline. Judicial actions are governed by separate limitations periods."
+    },
+    "attorneys_fees": {
+      "value": "Court SHALL award reasonable attorney's fees and costs to a prevailing requester. Court MAY impose civil penalties of $2,500 to $5,000 per occurrence when the public body willfully and intentionally fails to comply or otherwise acts in bad faith.",
+      "certainty": "confirmed",
+      "citation": "5 ILCS 140/11(i), (j)",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K11.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. No residency requirement.",
+    "certainty": "confirmed",
+    "citation": "5 ILCS 140/3(a)",
+    "source_url": "https://www.ilga.gov/legislation/ilcs/documents/000501400K3.htm",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=85&ChapterID=2",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": []
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://theholetruth.org/schemas/jurisdiction.schema.json",
+  "title": "Public-Records Jurisdiction",
+  "description": "Canonical record of a single transparency-law jurisdiction. Every load-bearing fact is wrapped in a SourcedField with citation, source URL, and certainty so the corpus is auditable and the product never invents law.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "level",
+    "law",
+    "response",
+    "fees",
+    "submission",
+    "exemptions",
+    "appeal",
+    "requester_eligibility",
+    "corpus_meta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of the schema this record conforms to.",
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string",
+      "description": "Stable identifier. Federal: 'US-FED'. States: 'US-XX' (USPS code).",
+      "pattern": "^US-[A-Z]{2,3}$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the jurisdiction."
+    },
+    "level": {
+      "type": "string",
+      "enum": ["federal", "state"],
+      "description": "Government level. v0 does not cover local government."
+    },
+    "law": {
+      "type": "object",
+      "description": "Identity of the controlling transparency statute.",
+      "required": ["short_name", "long_name", "primary_citation"],
+      "additionalProperties": false,
+      "properties": {
+        "short_name": { "type": "string", "description": "Common name, e.g. 'FOIA', 'TPIA', 'CPRA'." },
+        "long_name": { "type": "string", "description": "Full statutory title." },
+        "primary_citation": { "$ref": "#/definitions/SourcedField" },
+        "constitutional_basis": { "$ref": "#/definitions/SourcedField" },
+        "last_amended": { "$ref": "#/definitions/SourcedField" }
+      }
+    },
+    "response": {
+      "type": "object",
+      "description": "Required agency response timeline.",
+      "required": ["acknowledgment_deadline", "substantive_deadline", "extension_rules"],
+      "additionalProperties": false,
+      "properties": {
+        "acknowledgment_deadline": {
+          "$ref": "#/definitions/DurationField",
+          "description": "Time within which the agency must acknowledge receipt."
+        },
+        "substantive_deadline": {
+          "$ref": "#/definitions/DurationField",
+          "description": "Time within which the agency must produce records or assert exemptions."
+        },
+        "extension_rules": { "$ref": "#/definitions/SourcedField" },
+        "expedited_processing": { "$ref": "#/definitions/SourcedField" },
+        "constructive_denial": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "What happens if the agency does not respond in time."
+        }
+      }
+    },
+    "fees": {
+      "type": "object",
+      "description": "Cost structure the requester may face.",
+      "required": ["search_fees", "copy_fees", "fee_waiver"],
+      "additionalProperties": false,
+      "properties": {
+        "search_fees": { "$ref": "#/definitions/SourcedField" },
+        "copy_fees": { "$ref": "#/definitions/SourcedField" },
+        "review_fees": { "$ref": "#/definitions/SourcedField" },
+        "fee_waiver": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Conditions for fee waiver (public-interest, indigent, etc.)."
+        },
+        "advance_payment_threshold": { "$ref": "#/definitions/SourcedField" }
+      }
+    },
+    "submission": {
+      "type": "object",
+      "description": "How a requester may file the request.",
+      "required": ["accepted_methods", "required_identification"],
+      "additionalProperties": false,
+      "properties": {
+        "accepted_methods": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Object whose value is an array of: 'mail' | 'email' | 'online_portal' | 'fax' | 'in_person' | 'phone'."
+        },
+        "required_identification": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Whether requester must provide ID, name, address, or citizenship."
+        },
+        "purpose_statement_required": { "$ref": "#/definitions/SourcedField" },
+        "agency_designation": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "How to identify the correct records custodian."
+        }
+      }
+    },
+    "exemptions": {
+      "type": "object",
+      "description": "Statutory grounds an agency may use to withhold records.",
+      "required": ["categories", "burden_of_proof"],
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Value is an array of {name, citation, summary} entries."
+        },
+        "burden_of_proof": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Which party must justify withholding."
+        },
+        "segregability_rule": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Whether non-exempt portions must be released after redaction."
+        }
+      }
+    },
+    "appeal": {
+      "type": "object",
+      "description": "Path to challenge a denial.",
+      "required": ["administrative_path", "judicial_path"],
+      "additionalProperties": false,
+      "properties": {
+        "administrative_path": { "$ref": "#/definitions/SourcedField" },
+        "judicial_path": { "$ref": "#/definitions/SourcedField" },
+        "appeal_deadline": { "$ref": "#/definitions/DurationField" },
+        "attorneys_fees": {
+          "$ref": "#/definitions/SourcedField",
+          "description": "Cost-shifting rules if requester prevails."
+        }
+      }
+    },
+    "requester_eligibility": {
+      "$ref": "#/definitions/SourcedField",
+      "description": "Who may file (any person, citizens only, residents, etc.). Critical for some states."
+    },
+    "corpus_meta": {
+      "type": "object",
+      "description": "Provenance for the record as a whole, independent of per-field provenance.",
+      "required": ["last_verified", "primary_source_url", "maintainers"],
+      "additionalProperties": false,
+      "properties": {
+        "last_verified": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO date the corpus maintainer last reviewed against authoritative source."
+        },
+        "primary_source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Canonical .gov URL for the statute itself."
+        },
+        "archived_source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Wayback Machine or equivalent snapshot of the primary source."
+        },
+        "maintainers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Who owns review for this jurisdiction. Use agent ids or human handles."
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["question", "raised_on"],
+            "additionalProperties": false,
+            "properties": {
+              "question": { "type": "string" },
+              "raised_on": { "type": "string", "format": "date" },
+              "blocks_field": { "type": "string", "description": "JSON pointer to the field this question blocks." }
+            }
+          },
+          "description": "Unresolved interpretation questions escalated to legal review."
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SourcedField": {
+      "type": "object",
+      "description": "A single fact about the law, with mandatory provenance. Every value-bearing field in the corpus uses this shape so a downstream UI can always show its source.",
+      "required": ["value", "certainty", "citation", "source_url"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "description": "The fact. Type varies by field; consumers should not rely on a single primitive type."
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["confirmed", "uncertain", "needs_escalation"],
+          "description": "confirmed: directly stated in the statute. uncertain: requires interpretation but corpus maintainer is confident. needs_escalation: open legal question, do not surface to user without disclaimer."
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The specific section reference, e.g. '5 U.S.C. § 552(a)(6)(A)(i)'."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Direct link to the .gov source for this specific fact."
+        },
+        "retrieved_on": {
+          "type": "string",
+          "format": "date",
+          "description": "When the maintainer last verified this specific source URL resolved to the cited content."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Maintainer notes, including caveats, recent amendments, or interpretive considerations."
+        }
+      }
+    },
+    "DurationField": {
+      "allOf": [
+        { "$ref": "#/definitions/SourcedField" },
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "object",
+              "required": ["amount", "unit", "day_type"],
+              "additionalProperties": false,
+              "properties": {
+                "amount": { "type": "integer", "minimum": 0 },
+                "unit": { "type": "string", "enum": ["days", "hours"] },
+                "day_type": {
+                  "type": "string",
+                  "enum": ["business", "calendar", "working_days_excluding_state_holidays"],
+                  "description": "Whether 'days' counts weekends and holidays."
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

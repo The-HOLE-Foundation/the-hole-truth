@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-TX",
+  "name": "Texas",
+  "level": "state",
+  "law": {
+    "short_name": "TPIA",
+    "long_name": "Texas Public Information Act",
+    "primary_citation": {
+      "value": "Tex. Gov't Code Ch. 552",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.001 et seq.",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "last_amended": {
+      "value": "88th Legislature, Regular Session (2023). Confirm against current chapter for any amendments enacted since.",
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code Ch. 552 (current)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Texas Legislature meets biennially. Most recent regular session was 2023. Verify current text before relying."
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": { "amount": 10, "unit": "days", "day_type": "business" },
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code § 552.221(d)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Statute requires production 'promptly' under § 552.221(a). If records cannot be produced within 10 business days, the governmental body must certify that in writing and state a date when records will be available — that 10-business-day check-in is treated by AG opinions as the practical acknowledgment deadline. Mark uncertain because 'promptly' is the literal text and 'reasonably' is judicially construed."
+    },
+    "substantive_deadline": {
+      "value": { "amount": 10, "unit": "days", "day_type": "business" },
+      "certainty": "needs_escalation",
+      "citation": "Tex. Gov't Code § 552.221(a), (d)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Statute requires 'prompt' production with no fixed number of days. 10 business days is the practical norm derived from § 552.221(d) and AG opinions, but it is not a statutory deadline for production itself. Needs legal review before being surfaced to users as 'the deadline.'"
+    },
+    "extension_rules": {
+      "value": "If the governmental body believes records are excepted from disclosure, it must request an AG ruling within 10 business days of receiving the request. Failure to timely request a ruling presumptively makes records public. § 552.301.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.301(a), (b)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "expedited_processing": {
+      "value": "Not provided by statute. Texas PIA does not have a federal-style expedited processing category.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code Ch. 552 (absence of provision)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "constructive_denial": {
+      "value": "If the governmental body fails to request an AG ruling within 10 business days, the records are presumed public absent a compelling reason.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.302",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "Charges allowed for personnel time at the rate set by the Office of the Attorney General; first hour of personnel time is free if the request is for 50 or fewer pages of readily available material.",
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code § 552.261; 1 Tex. Admin. Code § 70.3",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Fee schedule is set by OAG regulation, not the statute. Confirm current Texas Administrative Code rate before quoting."
+    },
+    "copy_fees": {
+      "value": "Standard paper copy fees set by OAG rules. The statute caps and structures, OAG regulations fix the per-page amount.",
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code § 552.262; 1 Tex. Admin. Code § 70.3",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "Governmental body may waive or reduce charges if it determines waiver is in the public interest because providing the information primarily benefits the general public.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.267",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "advance_payment_threshold": {
+      "value": "Governmental body may require deposit or bond when estimated cost exceeds $100.",
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code § 552.263",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Threshold figure subject to amendment; verify current statute."
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "in_person"],
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.234",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Request must be in writing. Statute specifies mail, email to designated address, hand delivery, or a designated electronic submission method. § 552.234 governs designation of submission channels."
+    },
+    "required_identification": {
+      "value": "Requester need not state purpose. Identification is not required to make a request.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.222(a)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.222(a)",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "agency_designation": {
+      "value": "Requests must go to the 'public information officer' designated by the governmental body holding the records. The Office of the Attorney General maintains guidance on identifying the officer.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.233",
+      "source_url": "https://www.texasattorneygeneral.gov/open-government",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Confidential by law", "citation": "Tex. Gov't Code § 552.101", "summary": "Information confidential by law (constitutional, statutory, or judicial decision)." },
+        { "name": "Personnel matters", "citation": "Tex. Gov't Code § 552.102", "summary": "Personnel information whose disclosure would be a clearly unwarranted invasion of personal privacy." },
+        { "name": "Litigation / settlement", "citation": "Tex. Gov't Code § 552.103", "summary": "Information related to pending or reasonably anticipated litigation." },
+        { "name": "Competitive bidding", "citation": "Tex. Gov't Code § 552.104", "summary": "Information that, if released, would give competitive advantage in a bidding context." },
+        { "name": "Real estate transactions", "citation": "Tex. Gov't Code § 552.105", "summary": "Information about location of property for acquisition by the governmental body." },
+        { "name": "Audit working papers", "citation": "Tex. Gov't Code § 552.116", "summary": "Audit working papers of the State Auditor, county auditors, etc." },
+        { "name": "Personal information", "citation": "Tex. Gov't Code § 552.117", "summary": "Home addresses, phone numbers, and family info of public employees and officials who elect protection." },
+        { "name": "Law enforcement", "citation": "Tex. Gov't Code § 552.108", "summary": "Records of pending or active law enforcement investigations and prosecutions." },
+        { "name": "Other enumerated exceptions", "citation": "Tex. Gov't Code §§ 552.101-552.158", "summary": "Multiple additional category-specific exceptions. Full enumeration required before drafting an appeal." }
+      ],
+      "certainty": "uncertain",
+      "citation": "Tex. Gov't Code §§ 552.101-552.158",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01",
+      "notes": "Texas has ~60 enumerated exceptions. This is a representative subset for v0; full enumeration is required before the product can claim completeness."
+    },
+    "burden_of_proof": {
+      "value": "Governmental body bears the burden to establish that requested information is excepted. The AG ruling process places the obligation on the governmental body to articulate and support each claimed exception.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.301; § 552.302",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "segregability_rule": {
+      "value": "If only a portion of information is excepted, the governmental body must redact the excepted portions and disclose the remainder.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.235",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "Requester may file a complaint with the Office of the Attorney General Open Records Division. The OAG issues binding rulings on whether records must be released.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code §§ 552.301-552.306",
+      "source_url": "https://www.texasattorneygeneral.gov/open-government",
+      "retrieved_on": "2026-06-01"
+    },
+    "judicial_path": {
+      "value": "Mandamus action in district court to compel disclosure. The OAG or the requester may file suit if a governmental body refuses to release information after an AG ruling.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code §§ 552.321, 552.3215",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    },
+    "attorneys_fees": {
+      "value": "Court may award costs and reasonable attorney fees to a substantially prevailing plaintiff.",
+      "certainty": "confirmed",
+      "citation": "Tex. Gov't Code § 552.323",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. Public information is available to the public 'at a minimum during the normal business hours of the governmental body.' No residency or citizenship requirement.",
+    "certainty": "confirmed",
+    "citation": "Tex. Gov't Code § 552.021; § 552.221(a)",
+    "source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": [
+      {
+        "question": "Confirm the canonical 'response deadline' framing for TPIA. The statute's 'promptly' standard plus the 10-business-day check-in rule needs a legally-defensible product-level rule before we tell users a number.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/response/substantive_deadline"
+      },
+      {
+        "question": "Enumerate all current §§ 552.101-552.158 exceptions; the v0 subset is illustrative only.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/exemptions/categories"
+      }
+    ]
+  }
+}

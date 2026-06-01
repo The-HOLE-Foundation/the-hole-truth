@@ -1,0 +1,212 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-FED",
+  "name": "United States Federal Government",
+  "level": "federal",
+  "law": {
+    "short_name": "FOIA",
+    "long_name": "Freedom of Information Act",
+    "primary_citation": {
+      "value": "5 U.S.C. § 552",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "last_amended": {
+      "value": "FOIA Improvement Act of 2016, Pub. L. 114-185",
+      "certainty": "confirmed",
+      "citation": "Pub. L. 114-185, 130 Stat. 538 (2016)",
+      "source_url": "https://www.congress.gov/bill/114th-congress/senate-bill/337",
+      "retrieved_on": "2026-06-01",
+      "notes": "Most recent comprehensive amendment. OPEN GOVERNMENT Act of 2007 (Pub. L. 110-175) and earlier amendments also still in force. Verify against current code before relying."
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": { "amount": 20, "unit": "days", "day_type": "working_days_excluding_state_holidays" },
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(A)(i)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "Statute requires the agency to 'determine within 20 days (excepting Saturdays, Sundays, and legal public holidays) after the receipt of any such request' whether to comply. This is the canonical FOIA 20-working-day rule."
+    },
+    "substantive_deadline": {
+      "value": { "amount": 20, "unit": "days", "day_type": "working_days_excluding_state_holidays" },
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(A)(i)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "Same 20-working-day clock applies to the substantive determination. Actual record production may follow the determination if records are voluminous."
+    },
+    "extension_rules": {
+      "value": "Agency may extend by up to 10 working days for 'unusual circumstances' (need to search field offices, voluminous records, or need to consult with other agencies). Must give written notice with extension reason and expected completion date.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(B)(i)-(iii)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "expedited_processing": {
+      "value": "Requester may seek expedited processing on a showing of (i) imminent threat to life or physical safety, or (ii) urgency to inform the public about actual or alleged government activity, where the requester is primarily engaged in disseminating information.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(E)(v)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "constructive_denial": {
+      "value": "If the agency fails to comply with the time limits, the requester is deemed to have exhausted administrative remedies and may file suit in federal district court.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(C)(i)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "Search fees chargeable to commercial-use requesters and to 'other' requesters (i.e., not news media, educational, or non-commercial scientific). Not chargeable to news media, educational, or non-commercial scientific requesters. First two hours of search are free for non-commercial requesters.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(A)(ii), (iv)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "copy_fees": {
+      "value": "Reasonable duplication costs chargeable to all requester categories. First 100 pages of duplication are free for non-commercial requesters.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(A)(ii), (iv)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "review_fees": {
+      "value": "Review fees chargeable only to commercial-use requesters.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(A)(ii)(I)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "Fees waived or reduced if disclosure is in the public interest because it is likely to contribute significantly to public understanding of government operations or activities, and is not primarily in the commercial interest of the requester.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(A)(iii)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "advance_payment_threshold": {
+      "value": "Agency may require advance payment if estimated fees exceed $250 or if the requester has previously failed to pay fees in a timely fashion.",
+      "certainty": "uncertain",
+      "citation": "5 U.S.C. § 552(a)(4)(A)(v); 28 C.F.R. § 16.10(i) (DOJ example)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "The $250 figure is in regulations, not the statute. Each agency sets its own threshold by regulation. Treat as agency-specific."
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "online_portal", "fax"],
+      "certainty": "uncertain",
+      "citation": "5 U.S.C. § 552(a)(3)(A); agency-specific FOIA regulations",
+      "source_url": "https://www.foia.gov/how-to.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "FOIA itself only requires that the request 'reasonably describes the records sought' and is made 'in accordance with published rules.' Each agency publishes its own accepted submission methods. FOIA.gov is the federal portal."
+    },
+    "required_identification": {
+      "value": "No identification required. Requester need not state name, citizenship, or purpose unless seeking a fee waiver or non-commercial fee category.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(3)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(3)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "Purpose only relevant for fee category determination and fee waiver requests."
+    },
+    "agency_designation": {
+      "value": "Requests must be addressed to the FOIA office of the specific federal agency holding the records. The FOIA.gov portal aggregates agency contact info and submission portals.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(3)(A); 5 U.S.C. § 552(l)",
+      "source_url": "https://www.foia.gov/agency-search.html",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Exemption 1 — National Security", "citation": "5 U.S.C. § 552(b)(1)", "summary": "Classified national defense or foreign policy information." },
+        { "name": "Exemption 2 — Internal Personnel", "citation": "5 U.S.C. § 552(b)(2)", "summary": "Records related solely to the internal personnel rules and practices of an agency." },
+        { "name": "Exemption 3 — Statutory Exemption", "citation": "5 U.S.C. § 552(b)(3)", "summary": "Information specifically exempted from disclosure by another statute." },
+        { "name": "Exemption 4 — Trade Secrets", "citation": "5 U.S.C. § 552(b)(4)", "summary": "Trade secrets and commercial or financial information obtained from a person, privileged or confidential." },
+        { "name": "Exemption 5 — Deliberative Process", "citation": "5 U.S.C. § 552(b)(5)", "summary": "Inter- or intra-agency memoranda or letters protected by deliberative-process, attorney-client, or attorney-work-product privileges. Capped at 25 years by the FOIA Improvement Act of 2016." },
+        { "name": "Exemption 6 — Personal Privacy", "citation": "5 U.S.C. § 552(b)(6)", "summary": "Personnel, medical, and similar files where disclosure would constitute a clearly unwarranted invasion of personal privacy." },
+        { "name": "Exemption 7 — Law Enforcement", "citation": "5 U.S.C. § 552(b)(7)", "summary": "Records or information compiled for law enforcement purposes, six sub-categories." },
+        { "name": "Exemption 8 — Financial Institutions", "citation": "5 U.S.C. § 552(b)(8)", "summary": "Records related to the regulation or supervision of financial institutions." },
+        { "name": "Exemption 9 — Geological Information", "citation": "5 U.S.C. § 552(b)(9)", "summary": "Geological and geophysical information and data, including maps, concerning wells." }
+      ],
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(b)(1)-(9)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "burden_of_proof": {
+      "value": "The agency bears the burden to sustain its withholding. The court determines the matter de novo.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(B)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "segregability_rule": {
+      "value": "Any reasonably segregable portion of a record must be provided after deletion of the portions that are exempt.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(b) (final flush paragraph)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "Requester may administratively appeal an adverse determination to the head of the agency (or designated appellate authority). Each agency's FOIA regulations specify the appellate office.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(A)(i)(III)(aa); 5 U.S.C. § 552(a)(6)(A)(ii)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "Office of Government Information Services (OGIS) also offers non-binding mediation under 5 U.S.C. § 552(h)."
+    },
+    "judicial_path": {
+      "value": "After exhausting administrative remedies, requester may file de novo suit in the U.S. District Court for the district where the requester resides, where the requester has its principal place of business, where the records are located, or in the District of Columbia.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(B)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    },
+    "appeal_deadline": {
+      "value": { "amount": 90, "unit": "days", "day_type": "calendar" },
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(6)(A)(i)(III)(aa)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01",
+      "notes": "90-day minimum administrative appeal window the agency must provide to the requester. Statute of limitations for filing a FOIA lawsuit is separately the general 6-year period under 28 U.S.C. § 2401(a)."
+    },
+    "attorneys_fees": {
+      "value": "Court may assess reasonable attorney fees and other litigation costs against the United States if the complainant has substantially prevailed.",
+      "certainty": "confirmed",
+      "citation": "5 U.S.C. § 552(a)(4)(E)",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. No citizenship or residency requirement. Includes individuals, corporations, associations, and foreign nationals.",
+    "certainty": "confirmed",
+    "citation": "5 U.S.C. § 552(a)(3)(A)",
+    "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": []
+  }
+}

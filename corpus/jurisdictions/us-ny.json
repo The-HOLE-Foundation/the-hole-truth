@@ -1,0 +1,183 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-NY",
+  "name": "New York",
+  "level": "state",
+  "law": {
+    "short_name": "FOIL",
+    "long_name": "New York Freedom of Information Law",
+    "primary_citation": {
+      "value": "N.Y. Pub. Off. Law Art. 6, §§ 84-90",
+      "certainty": "confirmed",
+      "citation": "N.Y. Public Officers Law §§ 84-90",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/A6",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": { "amount": 5, "unit": "days", "day_type": "business" },
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01",
+      "notes": "Agency must, within five business days of receipt, either (i) make the record available, (ii) deny in writing with reasons, or (iii) furnish a written acknowledgment with an approximate date for grant or denial."
+    },
+    "substantive_deadline": {
+      "value": { "amount": 20, "unit": "days", "day_type": "business" },
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01",
+      "notes": "When an acknowledgment is given, the agency's stated date for grant or denial must be reasonable; the Committee on Open Government guidance and case law set 20 business days as the outer bound absent extraordinary circumstances."
+    },
+    "extension_rules": {
+      "value": "If more than 20 business days are needed, agency must give a written explanation and a date certain by which the request will be granted or denied. The date must be reasonable in light of the circumstances.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "constructive_denial": {
+      "value": "Failure to comply with the time limits constitutes a denial. Requester may then administratively appeal as if denied on the merits.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "No search fees. Agency may not charge for time spent searching for records.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 87(1)(b)(iii)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/87",
+      "retrieved_on": "2026-06-01"
+    },
+    "copy_fees": {
+      "value": "Reasonable fee for copying: up to $0.25 per page for paper copies up to 9\" x 14\". For records other than paper, actual cost of reproduction. Where preparation of an electronic record requires more than two hours of employee time, agency may charge for the additional time at the hourly rate of the lowest-paid employee with the necessary skill.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 87(1)(b)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/87",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "Statute does not expressly require fee waiver. Agencies may waive at their discretion. Indigency or public-interest considerations are not statutorily mandated grounds.",
+      "certainty": "uncertain",
+      "citation": "N.Y. Pub. Off. Law § 87 (absence of explicit waiver provision)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/87",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "in_person"],
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(b)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01",
+      "notes": "Each agency must accept requests transmitted by email if the agency has reasonable means to do so. Records Access Officer is the contact point."
+    },
+    "required_identification": {
+      "value": "No identification required. Requester need not state purpose or identity.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(3)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "agency_designation": {
+      "value": "Each agency must designate a Records Access Officer responsible for FOIL request coordination.",
+      "certainty": "confirmed",
+      "citation": "21 NYCRR § 1401.2",
+      "source_url": "https://docs.dos.ny.gov/coog/Right_to_know.html",
+      "retrieved_on": "2026-06-01",
+      "notes": "Regulation, not statute. Committee on Open Government publishes guidance and a search tool."
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Specifically exempted by state or federal statute", "citation": "N.Y. Pub. Off. Law § 87(2)(a)", "summary": "Records exempted from disclosure by other state or federal law." },
+        { "name": "Unwarranted invasion of personal privacy", "citation": "N.Y. Pub. Off. Law § 87(2)(b); § 89(2)", "summary": "Personal privacy. § 89(2) enumerates specific privacy categories." },
+        { "name": "Impairment of contract awards / collective bargaining", "citation": "N.Y. Pub. Off. Law § 87(2)(c)", "summary": "Disclosure would impair present or imminent contract awards or collective bargaining." },
+        { "name": "Trade secrets / commercial information", "citation": "N.Y. Pub. Off. Law § 87(2)(d)", "summary": "Trade secrets or information that, if disclosed, would cause substantial injury to the competitive position of a commercial enterprise." },
+        { "name": "Law enforcement records", "citation": "N.Y. Pub. Off. Law § 87(2)(e)", "summary": "Records compiled for law enforcement purposes, with five sub-grounds." },
+        { "name": "Endangerment of life/safety", "citation": "N.Y. Pub. Off. Law § 87(2)(f)", "summary": "Disclosure would endanger the life or safety of any person." },
+        { "name": "Inter-agency or intra-agency materials", "citation": "N.Y. Pub. Off. Law § 87(2)(g)", "summary": "Pre-decisional deliberative materials, except statistical/factual tabulations, instructions to staff that affect the public, final agency policy, and external audits." },
+        { "name": "Examination questions / answers", "citation": "N.Y. Pub. Off. Law § 87(2)(h)", "summary": "Records of examination questions or answers required to be administered." },
+        { "name": "Computer access codes", "citation": "N.Y. Pub. Off. Law § 87(2)(i)", "summary": "Computer access codes." },
+        { "name": "Photographs of victims of sex offenses", "citation": "N.Y. Pub. Off. Law § 87(2)(j)", "summary": "Photographs, films, audiotapes, etc. of crime victims taken in violation of certain laws." }
+      ],
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 87(2)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/87",
+      "retrieved_on": "2026-06-01"
+    },
+    "burden_of_proof": {
+      "value": "Agency has the burden of proving that the requested record falls squarely within an enumerated exemption.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(b)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "segregability_rule": {
+      "value": "Agency must redact exempt portions and disclose the remainder of an otherwise responsive record.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(2)(c)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "Requester may, within 30 days of a denial, appeal in writing to the head of the agency or designated appeals officer. Agency must respond in writing within 10 business days of the appeal.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "judicial_path": {
+      "value": "After exhausting administrative appeal, requester may bring an Article 78 proceeding in New York Supreme Court within 4 months of the final administrative determination.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(b); N.Y. C.P.L.R. Art. 78",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01"
+    },
+    "appeal_deadline": {
+      "value": { "amount": 30, "unit": "days", "day_type": "calendar" },
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(a)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01",
+      "notes": "Administrative appeal deadline only; the Article 78 deadline is separately governed by CPLR § 217."
+    },
+    "attorneys_fees": {
+      "value": "Court SHALL award reasonable attorney's fees and litigation costs to a requester who substantially prevails when the agency had no reasonable basis for denying access. Court MAY award fees in other cases where the requester substantially prevailed.",
+      "certainty": "confirmed",
+      "citation": "N.Y. Pub. Off. Law § 89(4)(c)",
+      "source_url": "https://www.nysenate.gov/legislation/laws/PBO/89",
+      "retrieved_on": "2026-06-01",
+      "notes": "2017 amendments strengthened fee-shifting for requesters."
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. No residency requirement.",
+    "certainty": "confirmed",
+    "citation": "N.Y. Pub. Off. Law § 84; § 89(3)(a)",
+    "source_url": "https://www.nysenate.gov/legislation/laws/PBO/A6",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "https://www.nysenate.gov/legislation/laws/PBO/A6",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": []
+  }
+}

@@ -31,6 +31,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Validate corpus
+        run: npm run validate:corpus
+
       - name: Typecheck
         run: npm run typecheck
 

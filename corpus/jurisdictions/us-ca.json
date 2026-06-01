@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "id": "US-CA",
+  "name": "California",
+  "level": "state",
+  "law": {
+    "short_name": "CPRA",
+    "long_name": "California Public Records Act",
+    "primary_citation": {
+      "value": "Cal. Gov't Code § 7920.000 et seq.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code §§ 7920.000-7931.000 (Division 10 of Title 1)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "CPRA was recodified by AB 473 (Stats. 2021, ch. 614), effective January 1, 2023, moving from the former §§ 6250-6276.48 to the new §§ 7920.000+. Many secondary sources still cite the old section numbers; the new sections are operative."
+    },
+    "constitutional_basis": {
+      "value": "Cal. Const. Art. I, § 3(b) — established by Proposition 59 (2004), guaranteeing public access to government records and meetings.",
+      "certainty": "confirmed",
+      "citation": "Cal. Const. Art. I, § 3(b)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I",
+      "retrieved_on": "2026-06-01"
+    },
+    "last_amended": {
+      "value": "Recodified by Stats. 2021, ch. 614 (AB 473), operative January 1, 2023. Verify additional amendments since recodification.",
+      "certainty": "uncertain",
+      "citation": "Stats. 2021, ch. 614",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB473",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "response": {
+    "acknowledgment_deadline": {
+      "value": { "amount": 10, "unit": "days", "day_type": "calendar" },
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7922.535(a)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "Agency must, within 10 days of receipt, determine whether the request seeks copies of disclosable records and notify the requester. This is a determination obligation, not the production obligation. Verify exact section reference against current code text."
+    },
+    "substantive_deadline": {
+      "value": { "amount": 10, "unit": "days", "day_type": "calendar" },
+      "certainty": "needs_escalation",
+      "citation": "Cal. Gov't Code § 7922.535",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "The 10-day clock is for the determination, not necessarily final production. CPRA requires 'prompt' production of disclosable records once the determination is made. Treat as legally interpretive; requires counsel review before being surfaced to users as the deadline."
+    },
+    "extension_rules": {
+      "value": "Agency may extend the 10-day determination period by up to 14 days in 'unusual circumstances' (e.g., need to search separate offices, voluminous records, consultation needed). Must give written notice with reason and expected response date.",
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7922.535(b)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "constructive_denial": {
+      "value": "Statute does not provide an automatic constructive-denial trigger; remedy is to file a mandate action in superior court.",
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7923.000",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "fees": {
+    "search_fees": {
+      "value": "Search and review costs may NOT be charged to the requester for the act of locating records, except in narrow exceptions (e.g., specially produced electronic records under § 7922.575).",
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7922.530; § 7922.575",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "California is one of the most fee-restrictive states for routine records; verify exact section numbers post-recodification."
+    },
+    "copy_fees": {
+      "value": "Agency may charge the direct cost of duplication only. For electronic records, may also charge for the cost to construct a record or to program/extract data when those activities are specifically required to fulfill the request.",
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7922.530; § 7922.575",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "fee_waiver": {
+      "value": "No statutory fee waiver provision parallel to FOIA. Agencies may waive fees as a discretionary matter.",
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code Div. 10 (absence of provision)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "submission": {
+    "accepted_methods": {
+      "value": ["mail", "email", "in_person", "online_portal"],
+      "certainty": "uncertain",
+      "citation": "Cal. Gov't Code § 7922.525",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "CPRA permits oral or written requests; in practice most agencies require writing. Confirm method requirements with the specific agency."
+    },
+    "required_identification": {
+      "value": "No identification required. Requester need not state purpose or identity.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7921.300",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "CPRA explicitly protects the requester from being asked to identify themselves or state a purpose."
+    },
+    "purpose_statement_required": {
+      "value": false,
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7921.300",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "agency_designation": {
+      "value": "Each state or local agency is the custodian for its own records. There is no central state portal.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7920.510 (definition of 'state agency')",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "exemptions": {
+    "categories": {
+      "value": [
+        { "name": "Personnel, medical, similar files (privacy)", "citation": "Cal. Gov't Code § 7927.700", "summary": "Disclosure would constitute an unwarranted invasion of personal privacy." },
+        { "name": "Pending litigation", "citation": "Cal. Gov't Code § 7927.200", "summary": "Records pertaining to pending litigation to which the agency is a party." },
+        { "name": "Law enforcement investigatory", "citation": "Cal. Gov't Code § 7923.600 et seq.", "summary": "Investigatory files of law enforcement agencies (with significant exceptions for officer misconduct under SB 1421 / SB 16)." },
+        { "name": "Deliberative process / drafts", "citation": "Cal. Gov't Code § 7927.500", "summary": "Preliminary drafts, notes, or interagency memoranda not retained in the ordinary course." },
+        { "name": "Statutory exemptions", "citation": "Cal. Gov't Code § 7927.000 et seq.", "summary": "Records exempted from disclosure by other state or federal law." },
+        { "name": "Catch-all balancing test", "citation": "Cal. Gov't Code § 7922.000", "summary": "Records may be withheld on a showing that the public interest in nondisclosure clearly outweighs the public interest in disclosure." }
+      ],
+      "certainty": "needs_escalation",
+      "citation": "Cal. Gov't Code §§ 7923.000-7930.215",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "Post-recodification section numbers must be verified one-by-one. SB 1421 (2018) and SB 16 (2021) substantially narrowed law-enforcement exemptions for officer misconduct; surface this when relevant."
+    },
+    "burden_of_proof": {
+      "value": "Agency must justify withholding by demonstrating that the record is exempt under express provisions of the CPRA or that on the facts of the particular case the public interest in nondisclosure clearly outweighs the public interest in disclosure.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7922.000",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "segregability_rule": {
+      "value": "Any reasonably segregable portion of a record shall be available after deletion of the portions that are exempted by law.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7922.525(b)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    }
+  },
+  "appeal": {
+    "administrative_path": {
+      "value": "No formal administrative appeal process. Requester may write to the agency head requesting reconsideration; not statutorily required.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code Div. 10 (absence of provision)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "judicial_path": {
+      "value": "Verified petition for writ of mandate in the superior court. Either party may seek injunctive or declarative relief.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7923.000; § 7923.100",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01"
+    },
+    "attorneys_fees": {
+      "value": "Court shall award court costs and reasonable attorney's fees to the requester if the requester prevails. Attorney's fees may be awarded to the agency only if the court finds the requester's case was clearly frivolous.",
+      "certainty": "confirmed",
+      "citation": "Cal. Gov't Code § 7923.115",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+      "retrieved_on": "2026-06-01",
+      "notes": "Mandatory fee-shifting in favor of prevailing requesters is a structural feature of CPRA litigation."
+    }
+  },
+  "requester_eligibility": {
+    "value": "Any person. CPRA applies to 'every person' and explicitly includes residents and non-residents.",
+    "certainty": "confirmed",
+    "citation": "Cal. Gov't Code § 7922.525(a)",
+    "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+    "retrieved_on": "2026-06-01"
+  },
+  "corpus_meta": {
+    "last_verified": "2026-06-01",
+    "primary_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=",
+    "maintainers": ["cto@theholetruth"],
+    "open_questions": [
+      {
+        "question": "Verify every post-recodification CPRA section number (§§ 7920+) against the current code text. Many fields cite ranges drawn from secondary summaries; we need section-level confirmation.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/exemptions/categories"
+      },
+      {
+        "question": "Confirm whether the 10-day clock under § 7922.535 should be surfaced to users as the 'response deadline' or as the 'determination deadline.' This is a product framing question with legal implications.",
+        "raised_on": "2026-06-01",
+        "blocks_field": "/response/substantive_deadline"
+      }
+    ]
+  }
+}
