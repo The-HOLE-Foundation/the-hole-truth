@@ -209,11 +209,11 @@ That's the contract. If a new dependency or script lands, this section must be u
 
 ## 11. Roadmap (technical)
 
-**v0 (now):** Public landing page. Repo + CI + deploy path proven. No user data, no LLM calls.
+**v0 (shipped):** Public landing page. Repo + CI + deploy path proven. No user data, no LLM calls.
 
-**v0.1 (next):** Statute corpus schema + ingestion for federal FOIA + 5 priority states (TX, CA, NY, IL, FL). Tracked as **THE-4**.
+**v0.1 (shipped):** Statute corpus schema + ingestion for federal FOIA + 5 priority states (TX, CA, NY, IL, FL). Tracked as **THE-4**. JSON-per-jurisdiction with provenance on every load-bearing field; loader exposes `getJurisdiction()`.
 
-**v0.2:** Request-drafting flow. User picks a jurisdiction + record type, system drafts a legally-sound request with the correct citation. This is the v0 acceptance bar for my first 30 days. **No PII collection yet.**
+**v0.2 (shipped — THE-5):** Request-drafting flow at `/draft`. User picks a jurisdiction + record type, system drafts a legally-sound request with the citation pulled verbatim from the corpus. **No LLM in the loop yet** — the v0 drafter is a pure template fed by typed corpus lookups, which is the simplest way to guarantee no hallucinated citations. The "no hallucinated citation" invariant is enforced by `test/drafter.test.ts`. **No PII collection.**
 
 **v1:** Request tracking. Account creation, request status, follow-up generation, appeal drafting. PII enters the system here. Security threat-modeling required as a precondition.
 

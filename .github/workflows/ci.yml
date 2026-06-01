@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   build:
-    name: lint, typecheck, build
+    name: lint, typecheck, test, build
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -33,6 +33,9 @@ jobs:
 
       - name: Validate corpus
         run: npm run validate:corpus
+
+      - name: Test
+        run: npm test
 
       - name: Typecheck
         run: npm run typecheck

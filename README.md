@@ -27,6 +27,16 @@ You do **not** need to fill in `.env.local` to run the v0 landing page. Database
 | `npm run start` | Serve the production build. |
 | `npm run lint` | ESLint over the codebase. |
 | `npm run typecheck` | `tsc --noEmit`. |
+| `npm test` | Run the unit-test suite (vitest). |
+| `npm run validate:corpus` | Validate every jurisdiction file against the corpus schema. |
+
+### Try the v0 drafter
+
+```bash
+npm run dev
+```
+
+Open <http://localhost:3000/draft>, pick a jurisdiction (try Texas) and a record type ("Police incident report"), and generate a draft. The statutory citation in the draft is pulled directly from the JSON corpus in `corpus/jurisdictions/` — there is no LLM in the loop for v0. The "no hallucinated citation" guarantee is enforced by `test/drafter.test.ts`.
 
 ## Stack
 
@@ -38,7 +48,10 @@ Full rationale, data flow, security posture, and roadmap: [`ARCHITECTURE.md`](./
 
 ```
 app/              Next.js App Router routes (server components by default)
-lib/              Shared TS modules (LLM client, DB client — added with later tickets)
+  draft/          v0 request drafter (jurisdiction + record type → letter)
+corpus/           Statute corpus (JSON per jurisdiction + loader + validator)
+lib/              Shared TS modules (drafter, record-type catalog, …)
+test/             Unit tests (vitest)
 .github/          CI workflows
 ARCHITECTURE.md   Stack, data flow, security, roadmap
 HIRING_PLAN.md    Founding hiring sequence (CEO-owned)
