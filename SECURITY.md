@@ -47,6 +47,15 @@ To triage quickly, please include as much of the following as you can:
   or contact information without your permission. We will credit reporters in
   the security advisory unless you ask us not to.
 
+## Internal hardening references
+
+For the team / contributors (not for vulnerability reporters):
+
+- [`docs/security/rls-access-tiers.md`](docs/security/rls-access-tiers.md) — the
+  intended Supabase access tier (service-role-only, public-read,
+  authenticated-read, user-owned) for every table the public API can reach.
+  Add a row whenever you introduce a new table.
+
 ## Supported versions
 
 The/Hole/Truth is in **v0**. Only the current `main` branch is supported.
