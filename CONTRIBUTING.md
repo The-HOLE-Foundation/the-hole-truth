@@ -32,6 +32,7 @@ Useful issues include:
 2. Create a topic branch off `main`.
 3. Make your change. Keep diffs focused — one concern per PR.
 4. Run the local checks before pushing:
+
    ```bash
    npm run lint
    npm run typecheck
@@ -39,6 +40,7 @@ Useful issues include:
    npm run validate:corpus
    npm run build
    ```
+
 5. Sign your commits per the DCO requirement below.
 6. Open a pull request against `main`. Describe what changed, why, and how it
    was verified.
