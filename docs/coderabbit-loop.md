@@ -39,8 +39,7 @@ review (≈5 min after push), run B.
    ```
 4. **CodeRabbit GitHub App** installed on the repo's GitHub org. This is what
    makes the `coderabbitai[bot]` actually review PRs and post threads. Without
-   it, Phase B has nothing to consume. (See gap note below — the project repo
-   does not yet have a GitHub remote.)
+   it, Phase B has nothing to consume.
 
 ---
 
@@ -143,6 +142,31 @@ Set them as runtime secrets where the IC executes.
   Defer / Modify each on its own merits, with its own reason. Don't accept
   the whole bundle because one part is right, and don't reject it because
   one part is wrong.
+- **Phase B can re-frame a Phase A "defer."** When the CLI surfaces a finding
+  as a flat recommendation and you defer on a structural worry, the same
+  finding on the PR thread will include the bot's exact *proposed diff*. The
+  diff often resolves the structural concern Phase A's flat finding couldn't.
+  Re-evaluate Phase A defers against the Phase B proposed diff before
+  rejecting — that's where Phase B's marginal value over Phase A actually
+  shows up.
+- **CodeRabbit can't see org-level required-status-check rulesets.** If your
+  GitHub org has a `required_status_checks` rule on `main` (e.g. context
+  `build-and-test`), every workflow job's `name:` must produce a check
+  context that the org rule expects. CodeRabbit will sometimes suggest
+  renaming the job to a more descriptive label — **reject those suggestions
+  with a reason** if the name is load-bearing for the org rule. Before
+  opening the first PR on a new repo, run `gh api
+  repos/<org>/<repo>/rules/branches/main` and confirm every required
+  `context` is produced by some workflow job's `name:`. A PR sitting in
+  `BLOCKED` state with no obvious failing check is the symptom.
+- **Other AI reviewers may post on the same PR.** Some GitHub orgs have
+  Copilot Code Review (`copilot-pull-request-reviewer[bot]`) enabled via
+  ruleset, which posts alongside `coderabbitai[bot]`. **CodeRabbit is the
+  IC review tool for this loop.** Treat any other bot's output as
+  informational only — don't loop on its threads, don't autofix from it,
+  don't escalate it into the Phase B per-comment decision flow. If a second
+  bot is materially adding noise, escalate to the org admin for a
+  per-repo opt-out rather than building it into the loop.
 
 ---
 
