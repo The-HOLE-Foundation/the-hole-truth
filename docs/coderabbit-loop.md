@@ -115,10 +115,6 @@ Set them as runtime secrets where the IC executes.
 
 ## Rough edges & gotchas
 
-- **The project has no GitHub remote yet.** Phase B requires an open GitHub PR
-  reviewed by the bot, so Phase B cannot be exercised on this repo until the
-  remote is created and the CodeRabbit GitHub App is installed. Phase A works
-  the moment the CLI is authenticated.
 - **CLI auth is per-machine, per-user.** A fresh checkout on a new sandbox =
   fresh `coderabbit auth login`. For headless agents (Paperclip ICs running in
   ephemeral workspaces) prefer `--api-key` over the browser flow.
