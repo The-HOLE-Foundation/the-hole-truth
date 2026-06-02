@@ -49,25 +49,71 @@ Locked down by the same migration (THE-22):
 - `statutes.parser_runs` — parser execution log (0 rows)
 - `statutes.state_parsers` — generated parser source code, prompts, costs (53 rows)
 
-### `statutes.*` reference tables — already public
+### `statutes.*` reference tables — `public-read`
 
-- `statutes.jurisdiction_laws` — `public-read` (anon/authenticated SELECT)
-- `statutes.golden_truth` — `public-read` (PUBLIC role SELECT)
+- `statutes.jurisdiction_laws` — already had `jurisdiction_laws_public_read` (anon/authenticated SELECT)
+- `statutes.golden_truth` — already had `Public read` (PUBLIC role SELECT)
+- `statutes.units` (partitioned parent + every partition) — added by THE-23, [`20260602230000_rls_tiers_statutes_partitions.sql`](../../db/migrations/20260602230000_rls_tiers_statutes_partitions.sql)
+- `statutes.unit_annotations` (partitioned parent + every partition) — added by THE-23, same migration
 
-### Pending decision (tracked in follow-up issue)
+Partitioned-table footnote: queries through the parent use the parent's policies; direct queries against a single partition use only that partition's policies. We add the public-read policy on parent AND every partition so direct partition access doesn't silently return 0 rows.
 
-These appear in the Supabase security advisor with RLS disabled or with no policies and have not yet been assigned a tier:
+### `app.*` derivative reference data — `public-read`
 
-| Schema | Tables | Suspected intended tier |
-|--------|--------|--------------------------|
-| `statutes.units_*` (54 partitions + parent) | partitioned statute units | `public-read` |
-| `statutes.unit_annotations_*` (54 partitions + parent) | partitioned annotations | `public-read` |
-| `app.definitions`, `app.exemptions`, `app.jurisdiction_profiles`, `app.request_requirements`, `app.enforcement_mechanisms`, `app.statute_unit_enrichments`, `app.state_law_enrichments`, `app.jurisdiction_orientation_maps` | derivative reference data | `public-read` (likely) |
-| `app.statute_embeddings_*` | embeddings for similarity search | `public-read` or `service-role-only` (decide based on whether we want others to crawl them) |
-| `public.agencies`, `public.full_statutes`, `public.statutes`, `public.statutes_sections`, `public.statute_inventory`, `public.statute_enrichments`, `public.holidays`, `public.jurisdiction_scopes`, `public.json_schemas`, `public.db_docs` | legacy `public` schema tables (RLS enabled, no policy) | varies — see follow-up |
-| `public.auth_events`, `public.edge_embedding_requests`, `public.edge_request_logs`, `public.compilation_errors`, `public.statutes_extraction_logs`, `public.waitlist_signups` | logs and operational | `service-role-only` |
+Added by THE-23, [`20260602230100_rls_tiers_app_reference_and_embeddings.sql`](../../db/migrations/20260602230100_rls_tiers_app_reference_and_embeddings.sql):
 
-Each row gets a deliberate tier when the follow-up issue is worked. Schema-by-schema migrations, not one mega-migration.
+- `app.definitions`
+- `app.exemptions`
+- `app.jurisdiction_profiles`
+- `app.request_requirements`
+- `app.enforcement_mechanisms`
+- `app.statute_unit_enrichments`
+- `app.state_law_enrichments`
+- `app.jurisdiction_orientation_maps`
+
+### `app.*` embeddings — `service-role-only`
+
+Added by THE-23, same `app` migration:
+
+- `app.statute_embeddings` (partitioned parent + every partition)
+
+Embeddings are derived data with non-trivial compute cost and no current client/edge consumers. Vector search should be exposed through purpose-built RPCs we control, not by handing out raw embedding vectors over PostgREST. Flip to `public-read` with a one-line policy swap if intent changes.
+
+### `public.*` legacy reference tables — `public-read`
+
+Added by THE-23, [`20260602230200_rls_tiers_public_legacy_tables.sql`](../../db/migrations/20260602230200_rls_tiers_public_legacy_tables.sql):
+
+- `public.agencies`
+- `public.full_statutes`
+- `public.statutes`
+- `public.statutes_sections`
+- `public.statute_inventory`
+- `public.statute_enrichments`
+- `public.holidays`
+- `public.jurisdiction_scopes`
+- `public.json_schemas`
+- `public.db_docs`
+
+### `public.*` operational / logs — `service-role-only`
+
+Added by THE-23, same `public` migration:
+
+- `public.auth_events`
+- `public.edge_embedding_requests`
+- `public.edge_request_logs`
+- `public.compilation_errors`
+- `public.statutes_extraction_logs`
+- `public.waitlist_signups`
+
+### Out of scope of THE-22 / THE-23 (each gets its own issue)
+
+- `public.usage_logs` always-true INSERT policy (`rls_policy_always_true` advisor finding).
+- 73 `function_search_path_mutable` findings.
+- 16 `*_security_definer_function_executable` findings.
+- 6 `security_definer_view` findings.
+- 3 `materialized_view_in_api` findings.
+- `auth_leaked_password_protection` advisor finding.
+- `extension_in_public` for `citext` and `moddatetime`.
 
 ## How to add a row
 
