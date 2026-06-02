@@ -139,6 +139,14 @@ Set them as runtime secrets where the IC executes.
 - **False positives happen.** Especially on legal-domain code (statute IDs that
   look like magic numbers, citation strings flagged as "suspicious"). The IC
   is the source of truth. Defer with a reason and move on.
+- **One finding can bundle multiple concerns.** CodeRabbit occasionally rolls
+  two (or more) distinct issues into a single finding — e.g. an accessibility
+  bug plus an unrelated filename bug noted together because they sit in the
+  same file region. Treat the triage step as "one finding → N edits," not
+  one-for-one. Split the finding into independent concerns, then Apply /
+  Defer / Modify each on its own merits, with its own reason. Don't accept
+  the whole bundle because one part is right, and don't reject it because
+  one part is wrong.
 
 ---
 
