@@ -29,6 +29,7 @@ export interface DraftOutput {
   jurisdictionId: string;
   lawShortName: string;
   lawLongName: string;
+  recordTypeId: string;
   recordTypeLabel: string;
 }
 
@@ -45,16 +46,31 @@ function formatDate(iso: string | undefined): string {
   const value = iso ?? new Date().toISOString().slice(0, 10);
   // Guard against malformed input — fall through to a stable date rather
   // than throwing, since the date string is cosmetic, not load-bearing.
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return FALLBACK_DATE;
+  // Use the same long-form rendering as the happy path so the body never
+  // emits a raw ISO string.
+  const formatLong = (yyyy: number, mm: number, dd: number): string =>
+    new Date(Date.UTC(yyyy, mm - 1, dd)).toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  const [fbY, fbM, fbD] = FALLBACK_DATE.split("-").map(Number);
+  const fallback = formatLong(fbY, fbM, fbD);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return fallback;
   const [y, m, d] = value.split("-").map(Number);
   const date = new Date(Date.UTC(y, m - 1, d));
-  if (Number.isNaN(date.getTime())) return FALLBACK_DATE;
-  return date.toLocaleDateString("en-US", {
-    timeZone: "UTC",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  if (Number.isNaN(date.getTime())) return fallback;
+  // Reject calendar rollovers like "2024-13-45" that pass the regex but
+  // silently become a different valid date via Date.UTC normalization.
+  if (
+    date.getUTCFullYear() !== y ||
+    date.getUTCMonth() + 1 !== m ||
+    date.getUTCDate() !== d
+  ) {
+    return fallback;
+  }
+  return formatLong(y, m, d);
 }
 
 function addresseeFor(jurisdictionLevel: "federal" | "state"): string {
@@ -144,6 +160,7 @@ export function draftRequest(input: DraftInput): DraftOutput {
     jurisdictionId: jur.id,
     lawShortName: jur.law.short_name,
     lawLongName: jur.law.long_name,
+    recordTypeId: record.id,
     recordTypeLabel: record.label,
   };
 }

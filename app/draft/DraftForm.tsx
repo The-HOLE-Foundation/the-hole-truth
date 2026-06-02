@@ -99,13 +99,15 @@ export function DraftForm({ jurisdictions, recordTypes }: DraftFormProps) {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `request-${draft.jurisdictionId}-${recordTypeId}.txt`;
+    // Use the snapshot stored on `draft` so the filename can never drift
+    // from the body when the user changes the form after generating.
+    link.download = `request-${draft.jurisdictionId}-${draft.recordTypeId}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
     setCopyStatus("Draft downloaded as a .txt file.");
-  }, [draft, recordTypeId]);
+  }, [draft]);
 
   return (
     <div className="mt-10">
@@ -276,7 +278,16 @@ export function DraftForm({ jurisdictions, recordTypes }: DraftFormProps) {
         ) : null}
       </form>
 
-      <div ref={previewRef} aria-live="polite" className="mt-10">
+      {/*
+        Status span is the only live region — it announces a short
+        "Draft ready" cue so screen readers don't auto-announce the entire
+        request body. The body itself is reachable via focus moved to the
+        preview heading after submit.
+      */}
+      <span data-preview-status aria-live="polite" className="sr-only">
+        {draft ? "Draft ready." : ""}
+      </span>
+      <div ref={previewRef} className="mt-10">
         {draft ? (
           <section
             aria-labelledby={`${formId}-preview-title`}

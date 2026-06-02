@@ -35,8 +35,9 @@ describe("draftRequest — citation provenance", () => {
   });
 
   it("accepts both the full id and the USPS code for the jurisdiction", () => {
-    const a = draftRequest({ jurisdictionId: "US-TX", recordTypeId: "police_incident_report" });
-    const b = draftRequest({ jurisdictionId: "TX", recordTypeId: "police_incident_report" });
+    const requestDateIso = "2026-06-01";
+    const a = draftRequest({ jurisdictionId: "US-TX", recordTypeId: "police_incident_report", requestDateIso });
+    const b = draftRequest({ jurisdictionId: "TX", recordTypeId: "police_incident_report", requestDateIso });
     expect(a.body).toBe(b.body);
   });
 
