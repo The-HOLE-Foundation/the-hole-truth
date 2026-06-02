@@ -1,0 +1,11 @@
+# CODEOWNERS — default reviewer for The/Hole/Truth
+#
+# Owners listed here are auto-requested for review on every PR touching
+# their matched paths. This is the mechanical half of the merging-governance
+# policy documented in docs/coderabbit-loop.md and CONTRIBUTING.md.
+#
+# Username must be a GitHub user with write access to this repo, otherwise
+# GitHub silently drops the assignment. @Jobikinobi is the board user's
+# active GitHub account (verified collaborator on this repo).
+
+* @Jobikinobi

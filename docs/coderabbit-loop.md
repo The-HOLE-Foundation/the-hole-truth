@@ -170,6 +170,17 @@ Set them as runtime secrets where the IC executes.
 
 ---
 
+## Merging policy
+
+All changes to `main` land via PR — no exceptions, including doc edits and
+board-authored changes. The board (or designated reviewer) approves; CodeRabbit
+Phase A runs locally before push, Phase B runs on the open PR after the bot
+reviews (~5 min after push). Branch protection enforces this mechanically — see
+[`.github/CODEOWNERS`](../.github/CODEOWNERS) for the default reviewer and the
+repo's branch-protection settings for the rule itself.
+
+---
+
 ## Decision log
 
 - **Trigger model:** explicit, IC-invoked at `in_review`. Re-evaluate flip to
