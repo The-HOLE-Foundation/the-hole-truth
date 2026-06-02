@@ -1,5 +1,7 @@
 # The/Hole/Truth
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
+
 A free public-records assistant. Understand your rights, draft a legally-sound request to the correct agency, and track the response — across federal FOIA and all 50 state transparency laws.
 
 A 501(c)(3) project.
@@ -62,8 +64,12 @@ README.md         This file
 
 This is a 501(c)(3) public-interest project. Correctness over cleverness. Every claim the product makes about the law must be traceable to a source.
 
-Internal tickets are tracked in Paperclip. External contribution flow will be documented when the public repo lands.
+External contributors: see [`CONTRIBUTING.md`](./CONTRIBUTING.md) for how to file an issue, propose a change, and sign your commits under the DCO. The pre-merge review loop is documented in [`docs/coderabbit-loop.md`](./docs/coderabbit-loop.md). Internal tickets are tracked in Paperclip.
+
+## Security
+
+Found a vulnerability? Please do not file a public issue. See [`SECURITY.md`](./SECURITY.md) for the private disclosure path.
 
 ## License
 
-TBD. Will land before the first public commit on GitHub.
+Licensed under the [Apache License, Version 2.0](./LICENSE). Copyright 2026 The HOLE Foundation. See [`NOTICE`](./NOTICE) for attribution.
