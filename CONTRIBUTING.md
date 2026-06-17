@@ -49,6 +49,16 @@ For substantive code changes, the IC review loop documented in
 [`docs/coderabbit-loop.md`](./docs/coderabbit-loop.md) is the expected
 pre-merge checkpoint. Pure docs / config / typo PRs may skip it.
 
+## Merging policy
+
+All changes to `main` land via PR — no exceptions, including doc edits and
+board-authored changes. The board (or designated reviewer) approves; CodeRabbit
+Phase A runs locally before push, Phase B runs on the open PR after the bot
+reviews (~5 min after push). Branch protection enforces this mechanically:
+direct pushes to `main` are blocked, every PR needs at least one approving
+review from the default code owner ([`.github/CODEOWNERS`](./.github/CODEOWNERS)),
+and required CI checks must pass before merge.
+
 ## Developer Certificate of Origin (DCO)
 
 Every commit must be signed off under the
